@@ -222,7 +222,7 @@ async function renderListing(id) {
     <div class="deal-box">
       🤝 <strong>Deal made</strong> between ${esc(l.name)} and ${esc(l.deal.with)}
       ${l.deal.price != null
-        ? `for <strong>${money(l.deal.price)}</strong> · platform fee (5%): ${money(l.deal.platformFee)}`
+        ? `for <strong>${money(l.deal.price)}</strong>`
         : '— no money changed hands'}
     </div>` : '';
 

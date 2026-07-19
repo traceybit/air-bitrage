@@ -14,7 +14,6 @@ require 'time'
 PORT = ENV.fetch('PORT', '4747').to_i
 ROOT = __dir__
 DATA_FILE = File.join(ROOT, 'data', 'db.json')
-PLATFORM_FEE = 0.05
 CATEGORIES = %w[seat-swap recline rebooking lounge upgrade other].freeze
 KINDS = %w[offer request].freeze
 
@@ -239,7 +238,6 @@ def accept_deal(id, b)
     listing['acceptedReplyId'] = reply['id']
     listing['deal'] = {
       'with' => reply['name'], 'price' => price,
-      'platformFee' => price ? (price * PLATFORM_FEE).round(2) : nil,
       'closedAt' => Time.now.utc.iso8601
     }
     listing

@@ -44,10 +44,10 @@ Then open http://localhost:4747. Use `PORT=8080 ruby server.rb` to run on a diff
   lounge pass, upgrade, or anything else. Price is optional.
 - **Reply and negotiate** — anyone on the flight can reply, with an optional counter-offer.
 - **Make the deal** — the poster accepts a reply; the deal closes at the reply's
-  counter-offer price (or the listing price), and the platform takes a 5% fee.
+  counter-offer price (or the listing price). No platform fee.
 
 This is an MVP: no accounts or auth (anyone can accept a deal on any listing), no payments
-(the fee is computed and displayed, not collected), and no real flight validation.
+(prices are agreed in the app, money changes hands in person), and no real flight validation.
 
 ## Project structure
 
