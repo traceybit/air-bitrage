@@ -1,0 +1,109 @@
+/* air-bitrage — deliberately a little craigslist: plain, dense, link-forward. */
+
+:root {
+  --ink: #1c1c1c;
+  --muted: #767676;
+  --accent: #1451c7;      /* runway-sign blue */
+  --visited: #551a8b;     /* craigslist purple, an homage */
+  --offer: #0a7a3d;
+  --request: #b35c00;
+  --line: #e2e2e2;
+  --card: #fafafa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 0 1rem 3rem;
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+
+a { color: var(--accent); }
+a:visited { color: var(--visited); }
+
+.site-header {
+  display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap;
+  padding: 1rem 0; border-bottom: 2px solid var(--ink); margin-bottom: 1.25rem;
+}
+.logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--ink) !important; }
+.logo em { color: var(--accent); font-style: normal; }
+.logo .plane { font-size: 1.1rem; }
+.tagline { color: var(--muted); font-size: 0.9rem; }
+
+h1 { font-size: 1.4rem; margin: 0.5rem 0; }
+h2 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 1.5rem 0 0.5rem; }
+
+.hero h1 { font-size: 1.6rem; }
+.hero p { max-width: 46rem; }
+
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+  padding: 1rem; margin: 1rem 0;
+}
+
+.finder { display: flex; gap: 1rem; align-items: end; flex-wrap: wrap; }
+.finder label { display: flex; flex-direction: column; font-size: 0.85rem; color: var(--muted); gap: 0.2rem; }
+
+label { display: block; margin: 0.5rem 0; font-size: 0.85rem; color: var(--muted); }
+input, select, textarea {
+  font: inherit; color: var(--ink); width: 100%;
+  padding: 0.4rem 0.5rem; border: 1px solid #bbb; border-radius: 4px; background: #fff;
+}
+.finder input { width: auto; }
+.row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.row label { flex: 1; min-width: 10rem; }
+
+button {
+  font: inherit; cursor: pointer; padding: 0.45rem 0.9rem;
+  border: 1px solid var(--accent); border-radius: 4px;
+  background: var(--accent); color: #fff;
+}
+button:hover { filter: brightness(1.1); }
+button.linkish { background: none; border: none; color: var(--muted); text-decoration: underline; padding: 0; }
+
+.board-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.board-list, .listing-list { list-style: none; padding: 0; margin: 0; }
+.board-list li, .listing-list li { padding: 0.35rem 0; border-bottom: 1px dotted var(--line); }
+.listing-list li.inactive a { color: var(--muted); }
+
+.badge {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 0.1rem 0.4rem; border-radius: 3px; vertical-align: 1px;
+}
+.badge.offer { background: #e3f4ea; color: var(--offer); }
+.badge.request { background: #fdeedd; color: var(--request); }
+.badge.deal { background: #e8e3f7; color: var(--visited); }
+.badge.closed { background: #eee; color: var(--muted); }
+
+.price { color: var(--offer); margin-left: 0.3rem; }
+.muted { color: var(--muted); }
+.error { color: #b00020; background: #fdeaea; border: 1px solid #f3c1c1; border-radius: 4px; padding: 0.5rem 0.75rem; margin: 0.75rem 0; }
+
+.listing-detail .details { white-space: pre-wrap; }
+.crumbs { margin-top: 0; }
+
+.deal-box {
+  background: #f3effb; border: 1px solid #d9cdf2; border-radius: 6px;
+  padding: 0.75rem 1rem; margin: 1rem 0;
+}
+
+.reply.accepted { border-color: var(--visited); background: #f8f5fe; }
+
+.badge.demo { background: #fff4c2; color: #7a5d00; border: 1px dashed #d9b300; }
+.demo-card {
+  border: 1px dashed #d9b300; background: #fffdf2; border-radius: 6px;
+  padding: 0.75rem 1rem; margin: 1.25rem 0;
+}
+.demo-card p { margin: 0 0 0.5rem; }
+
+.cats ul { padding-left: 1.2rem; margin: 0.25rem 0; }
+.cats li { margin: 0.3rem 0; }
+
+.site-footer {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 0.8rem;
+}

@@ -1,0 +1,11 @@
+# Render blueprint — makes "New +" → "Blueprint" auto-configure this service.
+# Free tier: sleeps after ~15 min idle; data/db.json resets on restart/redeploy.
+services:
+  - type: web
+    name: air-bitrage
+    runtime: ruby
+    plan: free
+    startCommand: bundle exec ruby server.rb
+    envVars:
+      - key: BIND
+        value: 0.0.0.0
